@@ -11,8 +11,8 @@ class Lesson:
     TYPE_E = 5
     TYPE_F = 6
     TYPE_G = 7
-    TYPE_COMPULSORY = 8  # 専門教養教育科目
-    TYPE_ELECTIVE = 9  # 必修
+    TYPE_COMPULSORY = 8  # 必修
+    TYPE_ELECTIVE = 9  # 専門教養教育科目
     TYPE_NONE = 10  # タイプなし
     TYPE_CHOICES = (
         (TYPE_A, 'A'),
