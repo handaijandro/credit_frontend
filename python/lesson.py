@@ -32,7 +32,8 @@ class Lesson:
     COMMUNICATION_COURSE = 3
     INFORMATION_COURSE = 4
 
-    def __init__(self, src):
+    def __init__(self, src, id):
+        self.id = id
         self.subject_name = str(src[2]) if isinstance(src[2], str) else None
         self.credit = None if np.isnan(src[3]) else src[3]
         self.sbj_type[self.ELECTRICAL_COURSE] =  self._convert_subject_type(src[4])
@@ -70,6 +71,7 @@ class Lesson:
     
     def to_representation(self, course):
         lesson_obj = {
+            'id': self.id,
             'subject_name': self.subject_name,
             'credit': self.credit,
             'remark': self.remark,
