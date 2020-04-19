@@ -9,8 +9,11 @@ data = credit_csv_df.values.tolist()
 
 lessons = []
 # create Lesson object
+id = 1
 for d in data:
-    l = Lesson(d)
+    l = Lesson(d, id)
+    id += 1
+    # for information system course
     lessons.append(l.to_representation(Lesson.INFORMATION_COURSE))
 
 
