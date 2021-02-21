@@ -7,11 +7,18 @@
             <p class="subtitle">
               単位の計算、履修する授業の提案を行う。履修お手伝いアプリ
             </p>
-            <ng-container *ngIf="lessons">
-              <div *ngFor= "let lesson of lessons">
-                <h2>{{ lesson.subject_name}} ( {{ lesson.subject_type_label }} )</h2>
-              </div>
-            </ng-container>
+
+        </div>
+        <div class="container">
+          <ng-container *ngIf="lessons">
+            <div *ngFor= "let lesson of lessons">
+              <h2>{{ lesson.subject_name}} ( {{ lesson.subject_type_label }} )</h2>
+              <p> 単位数：{{ lesson.credit }}</p>
+            </div>
+          </ng-container>
+          <ng-container *ngIf="!lessons">
+            <p>科目を表示するのに問題が発生しました。</p>
+          </ng-container> 
         </div>
     </div>
   </section>
