@@ -24,8 +24,8 @@
               "src/assets"
             ],
             "styles": [
-              "credit-frontend/node_modules/bulma/css/bulma.css",
-              "src/styles.css"
+              "src/styles.css",
+              "../credit-frontend/node_modules/bulma/css/bulma.css"
             ],
             "scripts": []
           },
