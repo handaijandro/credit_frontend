@@ -1,5 +1,5 @@
 export interface Lesson {
-    "id": number,
+    "id": string,
     "subject_name": string,
     "credit": number,
     "remark": string,

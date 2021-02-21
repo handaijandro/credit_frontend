@@ -7,10 +7,14 @@ import { Lesson } from '../models/lesson.model';
   providedIn: 'root'
 })
 export class LessonsService {
-
+  private baseUrl = 'http://localhost:8000/lesson'
   constructor(private httpClient:  HttpClient ) { }
 
-  getLessons() {
-    return this.httpClient.get('') as Observable<Lesson[]>;
+  getLessons(): Observable<Lesson[]> {
+    return this.httpClient.get<any>(this.baseUrl);
+  }
+
+  get(id: string): Observable<Lesson> {
+    return this.httpClient.get<any>(this.baseUrl + '/' + id);
   }
 }

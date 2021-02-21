@@ -7,13 +7,10 @@
             <p class="subtitle">
               単位の計算、履修する授業の提案を行う。履修お手伝いアプリ
             </p>
-            <ng-container *ngIf="lessons" else #loading>
+            <ng-container *ngIf="lessons">
               <div *ngFor= "let lesson of lessons">
-                <h2>{{ lesson }}</h2>
+                <h2>{{ lesson.subject_name}} ( {{ lesson.subject_type_label }} )</h2>
               </div>
-            </ng-container>
-            <ng-container #loading>
-              科目のリストローディング中...
             </ng-container>
         </div>
     </div>
