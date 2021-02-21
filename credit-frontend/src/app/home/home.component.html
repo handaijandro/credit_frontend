@@ -1,10 +1,20 @@
-<section class="hero">
+<section class="hero is-primary is-bold is-fullheight">
     <div class="hero-body">
-      <p class="title">
-        Hero title
-      </p>
-      <p class="subtitle">
-        Hero subtitle
-      </p>
+        <div class="container has-text-centered">
+            <p class="title">
+             電情単位計算機
+            </p>
+            <p class="subtitle">
+              単位の計算、履修する授業の提案を行う。履修お手伝いアプリ
+            </p>
+            <ng-container *ngIf="lessons" else #loading>
+              <div *ngFor= "let lesson of lessons">
+                <h2>{{ lesson }}</h2>
+              </div>
+            </ng-container>
+            <ng-container #loading>
+              科目のリストローディング中...
+            </ng-container>
+        </div>
     </div>
   </section>
