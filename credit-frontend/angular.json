@@ -24,7 +24,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
+              "src/styles.scss",
               "../credit-frontend/node_modules/bulma/css/bulma.css"
             ],
             "scripts": []
@@ -119,6 +119,11 @@
           }
         }
       }
+    }
+  },
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
     }
   },
   "defaultProject": "credit-frontend"
