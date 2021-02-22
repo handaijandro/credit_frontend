@@ -1,0 +1,26 @@
+.main-container {
+    display:flex;
+    flex-direction: column;
+
+    max-width: 500px;
+    margin: auto;
+    padding-top: 50px;
+}
+
+.secondary-container {
+    display:flex;
+    flex-direction: column;
+
+    max-width: 500px;
+    margin: auto;
+    padding-top: 50px;
+}
+
+.classes-list {
+    margin-top: 35px;
+}
+
+app-class-card {
+    display: block;
+    margin-bottom: 25px;
+}
