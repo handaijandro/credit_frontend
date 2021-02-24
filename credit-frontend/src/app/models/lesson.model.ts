@@ -4,5 +4,6 @@ export interface Lesson {
     "credit": number,
     "remark": string,
     "subject_type_label": string,
-    "subject_type": number
+    "subject_type": number,
+    "is_checked": boolean, // test
 }

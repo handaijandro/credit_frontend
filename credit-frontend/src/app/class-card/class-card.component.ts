@@ -10,6 +10,7 @@ import { LessonsService } from '../services/lessons.service';
 export class ClassCardComponent implements OnInit {
   lessons: Lesson[];
   selectedLesson?: Lesson;
+  isSelected: boolean;
 
   constructor(private lessonService: LessonsService) { }
 
@@ -20,5 +21,7 @@ export class ClassCardComponent implements OnInit {
   onSelect(lesson: Lesson):void {
     this.selectedLesson = lesson;
   }
+
+    
 
 }

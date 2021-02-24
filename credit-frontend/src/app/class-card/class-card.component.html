@@ -1,12 +1,10 @@
-    <div #container *ngFor= "let lesson of lessons"  class="class-card-container">
-        <div class="class-card-content">
-                <h1 class="class-card-title">
-                    <h2>{{ lesson.subject_name}}</h2>
-                </h1>
-                <div class="class-card-body">
-                    <p> <b>({{ lesson.subject_type_label }})</b></p>
-                    <p>単位数：{{ lesson.credit }} </p>
-                </div>
-                <input type="checkbox" class="plus-button" (click)="onSelect(lesson)">
-        </div>
+<div *ngFor="let lesson of lessons" class="classes-list">
+  <div class="classes-item">
+    <div class="check-box">
+      <i class="material-icons">check</i>
     </div>
+    <div class="classes-text">
+        {{ lesson.subject_name }} ({{ lesson.subject_type_label }})
+    </div>
+  </div>
+</div>
